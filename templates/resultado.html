@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Resultado{% endblock %}
+{% block content %}
+<h2 class="mb-4">Resultado de tu Diagnóstico Financiero</h2>
+<div class="alert alert-info">
+  <strong>{{ nombre }}</strong>, tu nivel de preparación es: <strong>{{ nivel }}</strong><br>
+  {{ mensaje }}
+</div>
+
+<a href="{{ whatsapp_link }}" target="_blank" class="btn btn-success">
+  Enviar resultado por WhatsApp
+</a>
+
+<a href="/" class="btn btn-secondary ms-3">Volver al inicio</a>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title %}Lista de Leads{% endblock %}
+{% block content %}
+<h1 class="mb-4">Leads Recibidos</h1>
+<a href="/" class="btn btn-success mb-3">Nuevo Lead</a>
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Teléfono</th>
+      <th>Mensaje</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for lead in leads %}
+    <tr>
+      <td>{{ lead.id }}</td>
+      <td>{{ lead.nombre }}</td>
+      <td>{{ lead.correo }}</td>
+      <td>{{ lead.telefono }}</td>
+      <td>{{ lead.mensaje }}</td>
+      <td>{{ lead.fecha }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

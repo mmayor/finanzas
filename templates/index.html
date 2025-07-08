@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}¿Estás preparado para una emergencia financiera?{% endblock %}
+{% block content %}
+<h2 class="mb-4">¿Estás preparado para una emergencia financiera?</h2>
+<form action="/resultado" method="POST" class="bg-white p-4 rounded shadow-sm">
+
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Tu nombre</label>
+    <input type="text" class="form-control" name="nombre" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">¿Tienes un fondo de emergencia con al menos 3 meses de gastos?</label><br>
+    <select name="fondo" class="form-select">
+      <option value="0">No</option>
+      <option value="1">Más o menos</option>
+      <option value="2">Sí</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">¿Tus deudas están bajo control (menos del 30% de tus ingresos)?</label><br>
+    <select name="deudas" class="form-select">
+      <option value="0">No</option>
+      <option value="1">Más o menos</option>
+      <option value="2">Sí</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">¿Cuentas con seguros básicos (salud, vida, etc.)?</label><br>
+    <select name="seguros" class="form-select">
+      <option value="0">No</option>
+      <option value="1">Algunos</option>
+      <option value="2">Sí</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ver mi resultado</button>
+</form>
+{% endblock %}
