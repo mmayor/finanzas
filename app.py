@@ -35,7 +35,7 @@ def resultado():
     nombre = request.form.get('nombre', 'Usuario')
     texto = f"Hola, soy {nombre}. Mi nivel de preparación financiera es: {nivel}. Me gustaría recibir una evaluación gratuita."
     texto_encoded = texto.replace(" ", "%20").replace("\n", "%0A")
-    whatsapp_link = f"https://wa.me/17868734664?text={texto_encoded}"  # ← Cambia TU_NUMERO
+    whatsapp_link = f"https://wa.me/17866719903?text={texto_encoded}"  # ← Cambia TU_NUMERO
 
     return render_template("resultado.html", nombre=nombre, nivel=nivel, mensaje=mensaje, whatsapp_link=whatsapp_link)
 
